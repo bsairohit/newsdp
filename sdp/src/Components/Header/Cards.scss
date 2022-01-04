@@ -1,0 +1,133 @@
+.container-class
+{
+   
+    display: flex;
+    justify-content: center;
+    .left
+    { 
+
+        flex: 0.7;
+        overflow: hidden;
+        background-color: rgb(238, 228, 228);
+        
+    }
+    .right
+    {
+        flex: 0.3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgb(192, 187, 187);
+        opacity: .9;
+        .wrapper
+        {
+
+            h2
+            {
+                font-size: 40px;
+            }
+            
+            h1
+            {
+                font-size: 20px;
+                span{
+                    color: crimson;
+                }
+            }
+
+            .ityped-cursor{
+                animation: blink 1s infinite;
+
+                @keyframes blink {
+
+                    50%
+                    {
+                        opacity: 1;
+                    }
+
+                    100%
+                    {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+        a
+        {
+            position: absolute;
+            bottom: 10px;
+
+            img{
+                animation: arrowBlink 2s infinite; 
+            }
+
+            @keyframes arrowBlink {
+               100%
+               {
+                   opacity: 0;
+               }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+.flip-card-outer {
+  
+  
+    .flip-card-inner {
+      backface-visibility: visible;
+      transform-style: preserve-3d;
+      transition: .5s linear .1s;
+      position: relative;
+      width: inherit;
+      height: inherit;
+  
+      &.showBack {
+        transform: rotateY(180deg);
+      }
+    
+      .card {
+       
+    
+        &.front {
+         
+          transform: rotateY(0);
+          background-repeat: no-repeat;
+          background-size: cover;
+  
+          .icon {
+            transform: rotateY(180deg);
+          }
+        }
+    
+        &.back {
+          
+          transform: rotateY(180deg);
+  
+          .brand {
+            font-size: 2rem;
+            font-weight: bold;
+          }
+  
+          .name {
+            font-size: 1.4rem;
+          }
+  
+  
+          .icon {
+           
+            transform: rotateY(180deg);
+          }
+        }
+      }
+    }
+}
+  
